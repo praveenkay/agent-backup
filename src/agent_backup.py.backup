@@ -1,0 +1,11 @@
+#!/usr/bin/env python3
+"""Entry point for agent-backup CLI."""
+
+from agent_backup import main, telegram_bot_main
+
+if __name__ == "__main__":
+    import sys
+    if len(sys.argv) > 1 and sys.argv[1] == "telegram-bot-run":
+        telegram_bot_main()
+    else:
+        main()
